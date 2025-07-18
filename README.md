@@ -49,6 +49,27 @@ BANK_MARKETING_ML/
 ├── README.md
 ├── requirements.txt
 
+
+BANK_MARKETING_ML/
+├── data/
+│   └── bank-full.csv                     # Dataset
+│
+├── src/
+│   ├── models/                           # Saved models & artifacts
+│   │   └── (to be created after training)
+│   │       ├── bank_rf_model.pkl
+│   │       ├── scaler.pkl
+│   │       └── label_encoders.pkl
+│   │
+│   ├── data_ingestion.py                 # Load and validate CSV
+│   ├── preprocess.py                     # Handle encoding, scaling
+│   ├── train.py                          # Unified trainer (or base training logic)
+│   ├── train_RandomForest.py            # Random Forest specific training
+│   └── inference.py                      # Model loading and prediction
+│
+├── README.md                             # Project overview
+├── requirements.txt                      # Environment dependencies
+
 # Project Overview
 
 
