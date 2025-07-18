@@ -294,20 +294,7 @@ Rehan
 
 
 ## Conclusion and Future Directions
-This project demonstrated how machine learning can support targeted marketing efforts in the banking sector. By building and evaluating models to predict client subscription to term deposits, we developed a solution that improves campaign efficiency and decision-making.
 
-Our final model, XGBoost, showed strong performance across evaluation metrics. With SHAP values and ranking curves, we ensured the results were both accurate and interpretable, allowing marketing teams to prioritize outreach based on likelihood to convert.
-
-To strengthen future versions of the model, we recommend incorporating additional client features such as:
-
-* **Customer tenure**: Number of years the client has held an account with the bank  
-* **Product usage**: Total number of active financial products (e.g., savings, credit cards, loans)  
-* **Channel preference**: Indicated communication preferences (email, phone, SMS) or history of responsiveness  
-* **Credit standing**: Proxy indicators of financial health, such as internal risk rating or credit score band
-
-These features could enhance model precision and reflect behavioral patterns not captured in the original dataset.
-
-Next steps include retraining the model with newer data, integrating these additional features, and deploying the solution via real-time dashboards or APIs. These improvements will increase the model’s value in operational settings and support dynamic campaign strategies.
 
 
 
