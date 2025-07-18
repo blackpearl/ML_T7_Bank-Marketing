@@ -33,42 +33,8 @@ What value do our projects bring to the industry?
 We believe our project can help banks and financial institutions improve how they run their marketing campaigns. By using machine learning to predict which clients are most likely to subscribe to a term deposit, we can help reduce wasted outreach and focus efforts on people who are more likely to respond. This means better results for the business, lower costs, and a more personalized experience for customers. In a competitive industry like banking, being able to target the right people at the right time is a big advantage
 
 # Project Structure
-BANK_MARKETING_ML/
-├── data/
-│   └── bank-full.csv
-│
-├── src/
-│   ├── models/
-│   │   └── [model files: bank_rf_model.pkl, scaler.pkl, label_encoders.pkl]
-│   ├── data_ingestion.py
-│   ├── inference.py
-│   ├── preprocess.py
-│   ├── train_RandomForest.py
-│   └── train.py
-│
-├── README.md
-├── requirements.txt
 
-
-BANK_MARKETING_ML/
-├── data/
-│   └── bank-full.csv                     # Dataset
-│
-├── src/
-│   ├── models/                           # Saved models & artifacts
-│   │   └── (to be created after training)
-│   │       ├── bank_rf_model.pkl
-│   │       ├── scaler.pkl
-│   │       └── label_encoders.pkl
-│   │
-│   ├── data_ingestion.py                 # Load and validate CSV
-│   ├── preprocess.py                     # Handle encoding, scaling
-│   ├── train.py                          # Unified trainer (or base training logic)
-│   ├── train_RandomForest.py            # Random Forest specific training
-│   └── inference.py                      # Model loading and prediction
-│
-├── README.md                             # Project overview
-├── requirements.txt                      # Environment dependencies
+<img width="952" height="583" alt="image" src="https://github.com/user-attachments/assets/eef354e1-21fe-4804-9494-9d689ab063da" />
 
 # Project Overview
 
