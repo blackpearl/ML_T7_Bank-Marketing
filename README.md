@@ -33,7 +33,21 @@ What value do our projects bring to the industry?
 We believe our project can help banks and financial institutions improve how they run their marketing campaigns. By using machine learning to predict which clients are most likely to subscribe to a term deposit, we can help reduce wasted outreach and focus efforts on people who are more likely to respond. This means better results for the business, lower costs, and a more personalized experience for customers. In a competitive industry like banking, being able to target the right people at the right time is a big advantage
 
 # Project Structure
-Ritu
+BANK_MARKETING_ML/
+├── data/
+│   └── bank-full.csv
+│
+├── src/
+│   ├── models/
+│   │   └── [model files: bank_rf_model.pkl, scaler.pkl, label_encoders.pkl]
+│   ├── data_ingestion.py
+│   ├── inference.py
+│   ├── preprocess.py
+│   ├── train_RandomForest.py
+│   └── train.py
+│
+├── README.md
+├── requirements.txt
 
 # Project Overview
 
