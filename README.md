@@ -270,7 +270,13 @@ This matrix shows the pairwise Pearson correlation coefficients between six nume
 ## Model Development
 
 
-Ritu
+We developed a streamlined pipeline to efficiently handle both preprocessing and model training tasks. For preprocessing, numerical features were standardized using StandardScaler to ensure they were on the same scale, helping models learn effectively without bias toward features with larger magnitudes. Categorical variables were transformed using OneHotEncoder, converting them into binary columns so that the model could interpret them without assuming any order or hierarchy.
+
+To keep the workflow efficient and organized, we used a ColumnTransformer, which allowed us to apply these transformations to the appropriate columns in a single, unified step. This modular approach maintained consistency and reduced the risk of data leakage.
+
+We experimented with multiple machine learning algorithms—including Logistic Regression, Random Forest, LightGBM, and Support Vector Machines—to evaluate performance. Ultimately, XGBoost delivered the best results across key metrics, making it our model of choice for predicting term deposit subscriptions.
+
+
 
 
 ## Handling Imbalanced Data
