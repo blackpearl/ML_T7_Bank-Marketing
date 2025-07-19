@@ -307,8 +307,46 @@ We experimented with multiple machine learning algorithms—including Logistic R
 Raj
 
 
-## Model Training and Evaluation
-Jennifer
+## Model Training and Evaluation - Jennifer
+
+## 🔍 Model Evaluation – Logistic Regression (Baseline)  - Feihong
+
+We trained a baseline **Logistic Regression** model to predict whether a client will subscribe to a term deposit (`y`).
+
+### 📊 Evaluation Results
+
+**Confusion Matrix**:
+
+[[10828    137]
+
+[ 1083   309]]
+
+**Classification Report**:
+
+| Class | Precision | Recall | F1-score | Support |
+|-------|-----------|--------|----------|---------|
+| **0 (no)**  | 0.91      | 0.99   | 0.95     | 10,965  |
+| **1 (yes)** | 0.69      | 0.22   | 0.34     | 1,392   |
+
+- **Overall Accuracy**: 90%  
+- **Macro Avg F1**: 0.64  
+- **Weighted Avg F1**: 0.88
+
+### 📝 Key Observations
+
+- The model performs well for the **majority class** (`no`), but poorly on the **minority class** (`yes`) due to significant **class imbalance**.
+- Despite high overall accuracy, the **low recall for the 'yes' class (0.22)** indicates many false negatives.
+- Logistic Regression provides a **simple, interpretable baseline** for further modeling.
+
+### 🛠️ Recommendations for Improvement
+
+- **Handle class imbalance**:
+  - Use `class_weight='balanced'`
+  - Apply oversampling techniques like **SMOTE**
+- **Explore advanced models**:
+  - Try **Random Forest**, **XGBoost**, or **Gradient Boosting** for better handling of complex patterns.
+- **Use alternative evaluation metrics**:
+  - Include **precision-recall curves** and **ROC-AUC** to better assess performance on the minority class.
 
 
 ## Model Deployment and Interpretation
