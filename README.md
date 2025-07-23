@@ -292,14 +292,20 @@ PENDING
 ## Model Development
 
 We developed a streamlined pipeline to efficiently handle both preprocessing and model training tasks.
+
 •	Numerical features were standardized using StandardScaler to bring all values to a similar scale. This avoids bias toward features with larger values and improves model convergence.
+
 •	Categorical features were transformed using OneHotEncoder, converting categories into binary columns. This ensures the model treats them as distinct inputs without assuming any order.
+
 •	To keep the workflow clean and consistent, we used a ColumnTransformer to apply all preprocessing steps in a single, unified process—helping avoid data leakage and improving reproducibility.
+
 We trained and evaluated the following models:
+
 •	Logistic Regression
 •	Decision Tree
 •	Random Forest
 •	Neural Network (built using Keras)
+
 After comparing their performance on metrics like accuracy, precision, recall, and F1-score, the Neural Network model outperformed the others and was selected as the final model for deployment.
 
 
