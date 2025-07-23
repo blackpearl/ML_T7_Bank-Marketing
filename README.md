@@ -304,7 +304,44 @@ We experimented with multiple machine learning algorithms—including Logistic R
 ## Handling Imbalanced Data
 
 
-Raj
+### .  **🔹 Data Preparation & Cleaning**
+
+-   Handle missing values, outliers, data types
+    
+-   Encode categorical variables
+    
+-   Scale numerical features
+    
+-   Filter irrelevant or noisy records (like “never contacted or least contacted” clients)
+    
+-   ➤  **No balancing here**  — To ensure data quality and structure
+    
+
+----------
+
+### 2.  **🔹 Modeling Phase (Train/Test Split or CV)**
+
+-   After splitting into training and test sets (or folds for CV),  **we can apply class balancing on the training data**.
+    
+-   This avoids  **data leakage**  and keeps the test set  **representative of real-world imbalance**.
+    
+
+#### Techniques which can be used:
+
+-   **SMOTE**  /  **ADASYN**  (oversampling)
+    
+-   **Random undersampling**
+    
+-   **Class weights**  (e.g., in LogisticRegression, XGBoost)
+    
+-   **Threshold tuning**
+    
+
+----------
+
+### ⚠️ Why Not Balance Before Splitting?
+
+If you apply SMOTE or resampling  **before splitting**, your test set will contain synthetic samples, which  **invalidates evaluation metrics**  and  **overestimates performance**.
 
 
 ## Model Training and Evaluation - Jennifer
