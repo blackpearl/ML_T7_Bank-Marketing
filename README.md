@@ -34,7 +34,9 @@ We believe our project can help banks and financial institutions improve how the
 
 # Project Structure
 
-<img width="952" height="583" alt="image" src="https://github.com/user-attachments/assets/eef354e1-21fe-4804-9494-9d689ab063da" />
+![alt text](image-2.png)
+
+![alt text](image-3.png)
 
 # Project Overview
 
