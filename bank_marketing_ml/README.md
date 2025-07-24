@@ -33,8 +33,8 @@ venv\Scripts\activate
 
 ✅  Step 3 : Install all dependencies
     
-    pip install -r requirements.txt
-
+    pip install -r requirements.txt   
+   
 
 ✅ Step 4: Run Training Scripts
 
