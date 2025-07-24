@@ -74,3 +74,4 @@ seen before. This allows us to check the model’s accuracy, precision, recall, 
 
 This approach ensures that predictions are driven by meaningful patterns learned from real customer behavior — not by random 
 chance — highlighting how machine learning can uncover insights and support smarter, data-informed decision-making in marketing.
+
