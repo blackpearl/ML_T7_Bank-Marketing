@@ -73,4 +73,4 @@ seen before. This allows us to check the model’s accuracy, precision, recall, 
  and compares the performance of different algorithms (like Decision Tree and Random Forest). 
 
 This approach ensures that predictions are driven by meaningful patterns learned from real customer behavior — not by random 
-chance — highlighting how machine learning can uncover insights and support smarter, data-informed decision-making in marketing.
+chance — highlighting how machine learning can uncover insights and support smarter, data-informed decision-making in marketing.This branch includes the final cleaned structure with placeholder folders
