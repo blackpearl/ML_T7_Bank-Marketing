@@ -77,17 +77,39 @@ By identifying high-potential leads, our approach directly supports the bank’s
 
 **What are the risks and uncertainties?**
 
-
-
-
 We’re aware that certain features like call duration might inflate our model’s performance, so we’re testing models with and without it to make sure our predictions are realistic. We’re also dealing with class imbalance, which could affect how well our model identifies potential subscribers. Our goal is to build a model that not only performs well technically but also helps improve the conversion rate in a way that’s reliable and scalable.
 
+
+> #### 🔍 Data and Modeling Risks
+> 
+> -   **Imbalanced Target Variable**: The dataset has a significant class imbalance (i.e., many more "no" responses than "yes"), which may bias the model toward the majority class.
+>     
+> -   **Historical Bias**: Marketing decisions in past campaigns (e.g., whom to contact or how frequently) may reflect real-world human biases. The model may learn and replicate them.
+>     
+> -   **Feature Leakage**: The  `duration`  feature, while predictive, is not usable during deployment as it’s only known after the call — it has been dropped from training data.
+>     
+> -   **Client Behavior Drift**: Economic conditions and consumer behavior change over time, which may limit the long-term reliability of the trained model.
+>     
 
 **What methods and technologies will you use?**
 
 
 We’re using Python and tools like scikit-learn, xgboost, and shap to build and explain our models. Everything is tracked in GitHub, and we’re following best practices for collaboration. Our reproducible notebook shows how our model can be used to predict outcomes and support decisions that directly impact the bank’s conversion rate, a key metric for campaign success.
 
+**Planned Workflow and Technologies**
+
+> #### 🛠️ Methodology and Workflow
+> 
+> -   **Data Preprocessing**: Clean categorical variables, handle outliers, encode features, drop leakage columns, and filter to meaningful segments (e.g., previously contacted clients).
+>     
+> -   **Exploratory Data Analysis (EDA)**: Understand distribution, correlation, imbalance, and relationships (e.g., between  `poutcome`,  `previous`, and  `y`).
+>     
+> -   **Modeling**: Evaluate classification algorithms like Logistic Regression, Random Forest, and XGBoost with class imbalance handling techniques (SMOTE, class weights).
+>     
+> -   **Evaluation Criteria**: Models will be evaluated using  **Precision**,  **Recall**,  **F1 Score**, and  **ROC-AUC**, with an emphasis on minimizing false positives (wrongly identifying likely subscribers).
+>     
+> -   **Technology Stack**: Python (Pandas, NumPy, Seaborn, Scikit-learn, XGBoost), Jupyter Notebooks
+>     
 
 ## Requirements
 ![Data Analysis](https://img.shields.io/badge/-Data_analysis-informational?style=for-the-badge&logo=GooglePodcasts&logoColor=white&color=FFC98B)
@@ -169,8 +191,6 @@ This dataset is related to direct marketing campaigns (phone calls) of a Portugu
 
 * Client attributes: age, job, marital, education, default, housing, loan
 * Campaign-related: contact, month, day_of_week, duration
-* Social/economic context: emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed
-
 
 
 # 📊 Exploratory Data Analysis (EDA): Bank Marketing Campaign Datasets
@@ -194,6 +214,8 @@ The target indicates whether a client subscribed to a term deposit.
 ### Target Class Distribution
 - Both datasets show **significant class imbalance**.
 - Approximately **88.3%** of clients did **not** subscribe (`y = no`), while only **11.7%** said yes.
+
+![alt text](image-4.png)
 
 > 🟠 **Modeling Implication**: Class imbalance must be addressed (e.g., via resampling or class-weighting).
 
@@ -261,12 +283,20 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 - **pdays** and **previous** show a **moderate correlation** (0.455)
 - Most other pairs have **weak or negligible correlation** (|r| < 0.1)
 
-### `bank-additional-full.csv` Correlation Highlights
-- **euribor3m** ↔ **nr.employed**: Strong positive correlation
-- **emp.var.rate** ↔ **euribor3m**: Strong negative correlation
+----------
 
-> 🧭 These reflect macroeconomic patterns, indicating that interest rates and employment variables move together.
+**Summary of Exploratory Data Analysis**
 
+> #### 📊 EDA Highlights
+> 
+> -   **Contact History Analysis**: Clients with a successful  `poutcome`  in previous campaigns are far more likely to subscribe again.
+>     
+> -   **Imbalance Detection**: A clear skew toward "no" responses in the  `y`  column; special attention needed during modeling.
+>     
+> -   **Outliers and Data Cleaning**: Handled extreme values in  `age`,  `balance`, and  `campaign`. Dropped  `duration`  to prevent leakage.
+>     
+> -   **Feature Engineering**: Created flags like  `was_previously_contacted`  and grouped  `previous`  into meaningful categories to enhance model signal.
+>
 ---
 
 * Duration is a strong predictor but should be excluded if the goal is to predict before the call is made.
@@ -284,11 +314,77 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 
 ---
 
+## Summary: Data Cleaning and Preprocessing
 
+The dataset underwent extensive cleaning and transformation to ensure quality input for modeling. Below are the key steps:
 
+----------
 
-## Data Cleaning and Handling Missing Values - Preprocessing of the data
-PENDING
+### 🔹 1.  **Handling Missing and Invalid Data**
+
+-   Verified that there are  **no null values**  in the dataset.
+    
+-   Clarified that  `poutcome = 'nonexistent'`  and  `pdays = 999`  do  **not represent missing values**, but encode specific business logic (e.g., not contacted recently).
+    
+
+----------
+
+### 🔹 2.  **Column-Specific Cleaning**
+
+-   **`job`**: Standardized labels (e.g., replaced  `'admin.'`  with  `'admin'`).
+    
+-   **`month`**: Mapped month names to numerical values (`jan`  →  `1`, etc.) and kept original for reference.
+    
+-   **`day`**: Validated to ensure values are within calendar limits (1–31).
+    
+-   **`balance`**: Handled zero and negative values based on outlier logic.
+    
+-   **`duration`**: Dropped to avoid data leakage (only known after the call).
+    
+-   **`campaign`**: Limited outlier values above the threshold (`> 6`) and capped lower bounds at 0.
+    
+-   **`pdays`**: Cleaned by categorizing based on whether the client was contacted before and how long ago.
+    
+
+----------
+
+### 🔹 3.  **Feature Engineering**
+
+-   **`was_previously_contacted`**: Flag created based on  `pdays`  and  `previous`.
+    
+-   **`previous_contact_category`**: Binned  `previous`  into:
+    
+    -   `never_contacted`
+        
+    -   `contacted_once`
+        
+    -   `few_times`
+        
+    -   `many_times`
+        
+-   These enrich the model with campaign history context.
+    
+
+----------
+
+### 🔹 4.  **Target Variable and Subsetting**
+
+-   Filtered data to include only clients with  `was_previously_contacted = 1`  for focused modeling.
+    
+-   Created a new column  `client_status`:
+    
+    -   `'possible_client'`  if  `y = yes`
+        
+    -   `'failure'`  if  `y = no`
+        
+
+----------
+
+### 🔹 5.  **Data Imbalance Analysis**
+
+-   Identified imbalance in  `y`  distribution (especially skewed toward "no").
+    
+-   Planned to address using resampling (e.g., SMOTE) or class weights during model training.
 
 
 ## Model Development
