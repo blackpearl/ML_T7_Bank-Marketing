@@ -314,6 +314,8 @@ We experimented with multiple machine learning algorithms—including Logistic R
     
 -   Filter irrelevant or noisy records (like “never contacted or least contacted” clients)
     
+-   Quick Cleaning Tool: The `quick_clean.py` script provides a lightweight cleaning solution for exploratory testing or small-scale preprocessing.  
+    
 -   ➤  **No balancing here**  — To ensure data quality and structure
     
 
