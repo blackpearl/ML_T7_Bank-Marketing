@@ -1,0 +1,719 @@
+2025-07-24 17:35:10,403 - INFO - Loading neural network model and preprocessor
+2025-07-24 17:35:10,752 - ERROR - Error in prediction pipeline: Unrecognized keyword arguments: ['batch_shape']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 118, in predict_subscription_proba
+    model = tf.keras.models.load_model(MODEL_PATHS['model'])
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\engine\input_layer.py", line 152, in __init__
+    raise ValueError(
+ValueError: Unrecognized keyword arguments: ['batch_shape']
+2025-07-24 17:35:57,641 - INFO - Loading neural network model and preprocessor
+2025-07-24 17:35:57,676 - ERROR - Error in prediction pipeline: Unrecognized keyword arguments: ['batch_shape']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 118, in predict_subscription_proba
+    model = tf.keras.models.load_model(MODEL_PATHS['model'])
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\engine\input_layer.py", line 152, in __init__
+    raise ValueError(
+ValueError: Unrecognized keyword arguments: ['batch_shape']
+2025-07-24 17:36:05,800 - INFO - Loading neural network model and preprocessor
+2025-07-24 17:36:05,821 - ERROR - Error in prediction pipeline: Unrecognized keyword arguments: ['batch_shape']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 118, in predict_subscription_proba
+    model = tf.keras.models.load_model(MODEL_PATHS['model'])
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\engine\input_layer.py", line 152, in __init__
+    raise ValueError(
+ValueError: Unrecognized keyword arguments: ['batch_shape']
+2025-07-24 17:40:41,589 - INFO - Loading neural network model and preprocessor
+2025-07-24 17:40:41,663 - ERROR - Error in prediction pipeline: Unrecognized keyword arguments: ['batch_shape']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 119, in predict_subscription_proba
+    model = tf.keras.models.load_model(MODEL_PATHS['model'], compile=False)
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\engine\input_layer.py", line 152, in __init__
+    raise ValueError(
+ValueError: Unrecognized keyword arguments: ['batch_shape']
+2025-07-24 17:45:10,234 - INFO - Loading neural network model and preprocessor
+2025-07-24 17:45:10,298 - ERROR - Error in prediction pipeline: Unrecognized keyword arguments: ['batch_shape']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 119, in predict_subscription_proba
+    model = tf.keras.models.load_model(
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\darli\anaconda3\envs\dsi_participant\lib\site-packages\keras\engine\input_layer.py", line 152, in __init__
+    raise ValueError(
+ValueError: Unrecognized keyword arguments: ['batch_shape']
+2025-07-24 18:16:27,002 - INFO - Loading neural network model and preprocessor
+2025-07-24 18:16:27,003 - ERROR - Error in prediction pipeline: module 'tensorflow' has no attribute 'keras'
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 119, in predict_subscription_proba
+    model = tf.keras.models.load_model(
+AttributeError: module 'tensorflow' has no attribute 'keras'
+2025-07-24 19:11:01,965 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:11:28,478 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:11:28,836 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:11:28,855 - INFO - Model loaded successfully
+2025-07-24 19:11:29,798 - INFO - Preprocessor loaded successfully
+2025-07-24 19:11:29,799 - INFO - Validating input features: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:11:29,804 - ERROR - Missing features: ['was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:11:29,804 - ERROR - Error in prediction pipeline: Missing required features: ['was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 133, in predict_subscription_proba
+    raise ValueError(f"Missing required features: {missing}")
+ValueError: Missing required features: ['was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:14:57,787 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:15:06,875 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:15:07,158 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:15:07,173 - INFO - Model loaded successfully
+2025-07-24 19:15:07,437 - INFO - Preprocessor loaded successfully
+2025-07-24 19:15:07,437 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:15:07,454 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category', 'month_text']
+2025-07-24 19:15:07,454 - INFO - Validating preprocessed features
+2025-07-24 19:15:07,454 - ERROR - Missing features after preprocessing: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:15:07,455 - ERROR - Error in prediction pipeline: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 167, in predict_subscription_proba
+    raise ValueError(f"Missing required features: {missing}")
+ValueError: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:15:22,062 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:15:22,267 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:15:22,282 - INFO - Model loaded successfully
+2025-07-24 19:15:22,284 - INFO - Preprocessor loaded successfully
+2025-07-24 19:15:22,285 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:15:22,294 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category', 'month_text']
+2025-07-24 19:15:22,294 - INFO - Validating preprocessed features
+2025-07-24 19:15:22,295 - ERROR - Missing features after preprocessing: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:15:22,295 - ERROR - Error in prediction pipeline: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 167, in predict_subscription_proba
+    raise ValueError(f"Missing required features: {missing}")
+ValueError: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:17:18,327 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:17:29,537 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:17:29,842 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:17:29,856 - INFO - Model loaded successfully
+2025-07-24 19:17:30,069 - INFO - Preprocessor loaded successfully
+2025-07-24 19:17:30,070 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:17:30,096 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category', 'month_text', 'job_admin.', 'marital_married', 'education_primary', 'default_yes', 'housing_yes', 'loan_yes', 'contact_cellular', 'poutcome_unknown', 'month_text_jan', 'last_contact_category_never', 'last_contact_category_recent', 'last_contact_category_moderate', 'last_contact_category_long_ago', 'previous_contact_category_never_contacted', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times']
+2025-07-24 19:17:30,096 - INFO - Validating preprocessed features
+2025-07-24 19:17:30,097 - ERROR - Missing features after preprocessing: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_single', 'education_secondary', 'education_tertiary', 'default_no', 'housing_no', 'loan_no', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep']
+2025-07-24 19:17:30,097 - ERROR - Error in prediction pipeline: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_single', 'education_secondary', 'education_tertiary', 'default_no', 'housing_no', 'loan_no', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 211, in predict_subscription_proba
+    raise ValueError(f"Missing required features: {missing}")
+ValueError: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_single', 'education_secondary', 'education_tertiary', 'default_no', 'housing_no', 'loan_no', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep']
+2025-07-24 19:17:45,051 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:17:45,284 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:17:45,297 - INFO - Model loaded successfully
+2025-07-24 19:17:45,299 - INFO - Preprocessor loaded successfully
+2025-07-24 19:17:45,299 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:17:45,376 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category', 'month_text', 'job_admin.', 'marital_married', 'education_primary', 'default_no', 'housing_yes', 'loan_yes', 'contact_cellular', 'poutcome_unknown', 'month_text_jan', 'last_contact_category_never', 'last_contact_category_recent', 'last_contact_category_moderate', 'last_contact_category_long_ago', 'previous_contact_category_never_contacted', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times']
+2025-07-24 19:17:45,377 - INFO - Validating preprocessed features
+2025-07-24 19:17:45,378 - ERROR - Missing features after preprocessing: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_single', 'education_secondary', 'education_tertiary', 'default_yes', 'housing_no', 'loan_no', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep']
+2025-07-24 19:17:45,378 - ERROR - Error in prediction pipeline: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_single', 'education_secondary', 'education_tertiary', 'default_yes', 'housing_no', 'loan_no', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep']
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 211, in predict_subscription_proba
+    raise ValueError(f"Missing required features: {missing}")
+ValueError: Missing required features: ['job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_single', 'education_secondary', 'education_tertiary', 'default_yes', 'housing_no', 'loan_no', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep']
+2025-07-24 19:20:21,598 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:20:30,286 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:20:30,614 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:20:30,630 - INFO - Model loaded successfully
+2025-07-24 19:20:30,861 - INFO - Preprocessor loaded successfully
+2025-07-24 19:20:30,862 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:20:30,866 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category', 'month_text']
+2025-07-24 19:20:30,867 - INFO - Applying saved preprocessor
+2025-07-24 19:20:30,879 - ERROR - Error in prediction pipeline: could not convert string to float: 'jan'
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 165, in predict_subscription_proba
+    X_processed = preprocessor.transform(features_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\pandas\core\generic.py", line 2168, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'jan'
+2025-07-24 19:24:36,919 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:24:48,234 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:24:48,582 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:24:48,597 - INFO - Model loaded successfully
+2025-07-24 19:24:48,872 - INFO - Preprocessor loaded successfully
+2025-07-24 19:24:48,872 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:24:48,881 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category', 'month_text']
+2025-07-24 19:24:48,881 - INFO - Applying saved preprocessor
+2025-07-24 19:24:48,888 - ERROR - Error in prediction pipeline: could not convert string to float: 'jan'
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 175, in predict_subscription_proba
+    X_processed = preprocessor.transform(features_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\pandas\core\generic.py", line 2168, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'jan'
+2025-07-24 19:27:24,451 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:27:33,234 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:27:33,508 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:27:33,519 - INFO - Model loaded successfully
+2025-07-24 19:27:33,795 - INFO - Preprocessor loaded successfully
+2025-07-24 19:27:33,795 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:27:33,804 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:27:33,805 - INFO - Applying saved preprocessor
+2025-07-24 19:27:33,808 - ERROR - Error in prediction pipeline: could not convert string to float: 'jan'
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 179, in predict_subscription_proba
+    X_processed = preprocessor.transform(features_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\pandas\core\generic.py", line 2168, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'jan'
+2025-07-24 19:30:15,231 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:30:25,974 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:30:26,274 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:30:26,282 - INFO - Model loaded successfully
+2025-07-24 19:30:26,499 - INFO - Preprocessor loaded successfully
+2025-07-24 19:30:26,500 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:30:26,508 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:30:26,508 - INFO - Feature types before preprocessing:
+2025-07-24 19:30:26,510 - INFO - age: float64
+2025-07-24 19:30:26,510 - INFO - job: object
+2025-07-24 19:30:26,510 - INFO - marital: object
+2025-07-24 19:30:26,511 - INFO - education: object
+2025-07-24 19:30:26,511 - INFO - default: object
+2025-07-24 19:30:26,511 - INFO - balance: float64
+2025-07-24 19:30:26,512 - INFO - housing: object
+2025-07-24 19:30:26,512 - INFO - loan: object
+2025-07-24 19:30:26,512 - INFO - contact: object
+2025-07-24 19:30:26,513 - INFO - day: float64
+2025-07-24 19:30:26,513 - INFO - month: object
+2025-07-24 19:30:26,513 - INFO - duration: float64
+2025-07-24 19:30:26,514 - INFO - campaign: float64
+2025-07-24 19:30:26,515 - INFO - pdays: float64
+2025-07-24 19:30:26,516 - INFO - previous: float64
+2025-07-24 19:30:26,516 - INFO - poutcome: object
+2025-07-24 19:30:26,516 - INFO - was_previously_contacted: float64
+2025-07-24 19:30:26,516 - INFO - last_contact_category: category
+2025-07-24 19:30:26,518 - INFO - previous_contact_category: category
+2025-07-24 19:30:26,518 - INFO - Applying saved preprocessor
+2025-07-24 19:30:26,518 - ERROR - Error in prediction pipeline: columns are missing: {'month_text'}
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 190, in predict_subscription_proba
+    X_processed = preprocessor.transform(features_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1090, in transform
+    raise ValueError(f"columns are missing: {diff}")
+ValueError: columns are missing: {'month_text'}
+2025-07-24 19:33:01,158 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:33:09,235 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:33:09,577 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:33:09,588 - INFO - Model loaded successfully
+2025-07-24 19:33:09,809 - INFO - Preprocessor loaded successfully
+2025-07-24 19:33:09,811 - INFO - Preprocessor transformers:
+2025-07-24 19:33:09,811 - INFO - Transformer: num
+2025-07-24 19:33:09,811 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:33:09,812 - INFO - Type: Pipeline
+2025-07-24 19:33:09,812 - INFO - Transformer: cat
+2025-07-24 19:33:09,812 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:33:09,812 - INFO - Type: Pipeline
+2025-07-24 19:33:09,813 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:33:09,823 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:33:09,829 - INFO - Feature types before preprocessing:
+2025-07-24 19:33:09,829 - INFO - age: float64
+2025-07-24 19:33:09,829 - INFO - Sample value for age: 30.0
+2025-07-24 19:33:09,829 - INFO - job: object
+2025-07-24 19:33:09,830 - INFO - Sample value for job: admin.
+2025-07-24 19:33:09,830 - INFO - marital: object
+2025-07-24 19:33:09,830 - INFO - Sample value for marital: married
+2025-07-24 19:33:09,830 - INFO - education: object
+2025-07-24 19:33:09,830 - INFO - Sample value for education: primary
+2025-07-24 19:33:09,831 - INFO - default: object
+2025-07-24 19:33:09,831 - INFO - Sample value for default: yes
+2025-07-24 19:33:09,831 - INFO - balance: float64
+2025-07-24 19:33:09,831 - INFO - Sample value for balance: 0.0
+2025-07-24 19:33:09,831 - INFO - housing: object
+2025-07-24 19:33:09,832 - INFO - Sample value for housing: yes
+2025-07-24 19:33:09,832 - INFO - loan: object
+2025-07-24 19:33:09,832 - INFO - Sample value for loan: yes
+2025-07-24 19:33:09,832 - INFO - contact: object
+2025-07-24 19:33:09,832 - INFO - Sample value for contact: cellular
+2025-07-24 19:33:09,832 - INFO - day: float64
+2025-07-24 19:33:09,832 - INFO - Sample value for day: 15.0
+2025-07-24 19:33:09,832 - INFO - month: object
+2025-07-24 19:33:09,834 - INFO - Sample value for month: jan
+2025-07-24 19:33:09,834 - INFO - duration: float64
+2025-07-24 19:33:09,834 - INFO - Sample value for duration: 300.0
+2025-07-24 19:33:09,834 - INFO - campaign: float64
+2025-07-24 19:33:09,834 - INFO - Sample value for campaign: 1.0
+2025-07-24 19:33:09,834 - INFO - pdays: float64
+2025-07-24 19:33:09,835 - INFO - Sample value for pdays: -1.0
+2025-07-24 19:33:09,835 - INFO - previous: float64
+2025-07-24 19:33:09,835 - INFO - Sample value for previous: 0.0
+2025-07-24 19:33:09,835 - INFO - poutcome: object
+2025-07-24 19:33:09,835 - INFO - Sample value for poutcome: unknown
+2025-07-24 19:33:09,837 - INFO - was_previously_contacted: float64
+2025-07-24 19:33:09,837 - INFO - Sample value for was_previously_contacted: 0.0
+2025-07-24 19:33:09,837 - INFO - last_contact_category: category
+2025-07-24 19:33:09,837 - INFO - Sample value for last_contact_category: never
+2025-07-24 19:33:09,837 - INFO - previous_contact_category: category
+2025-07-24 19:33:09,837 - INFO - Sample value for previous_contact_category: never_contacted
+2025-07-24 19:33:09,837 - INFO - Applying saved preprocessor
+2025-07-24 19:33:09,838 - ERROR - Error in prediction pipeline: columns are missing: {'month_text'}
+Traceback (most recent call last):
+  File "C:\Users\darli\Desktop\projects\UoT\09_team_project\ML_T7_Bank-Marketing\app\main.py", line 209, in predict_subscription_proba
+    X_processed = preprocessor.transform(df_processed)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1090, in transform
+    raise ValueError(f"columns are missing: {diff}")
+ValueError: columns are missing: {'month_text'}
+2025-07-24 19:36:26,808 - WARNING - From C:\Users\darli\anaconda3\envs\bank_marketing\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-07-24 19:36:35,920 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:36:36,199 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:36:36,208 - INFO - Model loaded successfully
+2025-07-24 19:36:36,417 - INFO - Preprocessor loaded successfully
+2025-07-24 19:36:36,418 - INFO - Preprocessor transformers:
+2025-07-24 19:36:36,418 - INFO - Transformer: num
+2025-07-24 19:36:36,418 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:36:36,418 - INFO - Type: Pipeline
+2025-07-24 19:36:36,418 - INFO - Transformer: cat
+2025-07-24 19:36:36,419 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:36:36,419 - INFO - Type: Pipeline
+2025-07-24 19:36:36,419 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:36:36,420 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:36:36,447 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:36:36,460 - INFO - Feature types before preprocessor:
+2025-07-24 19:36:36,461 - INFO - age: int64 = 30
+2025-07-24 19:36:36,461 - INFO - job: object = admin.
+2025-07-24 19:36:36,461 - INFO - marital: object = married
+2025-07-24 19:36:36,461 - INFO - education: object = primary
+2025-07-24 19:36:36,461 - INFO - default: object = yes
+2025-07-24 19:36:36,463 - INFO - balance: int64 = 0
+2025-07-24 19:36:36,463 - INFO - housing: object = yes
+2025-07-24 19:36:36,463 - INFO - loan: object = yes
+2025-07-24 19:36:36,463 - INFO - contact: object = cellular
+2025-07-24 19:36:36,463 - INFO - day: int64 = 15
+2025-07-24 19:36:36,463 - INFO - month: object = 1
+2025-07-24 19:36:36,465 - INFO - duration: int64 = 300
+2025-07-24 19:36:36,465 - INFO - campaign: int64 = 1
+2025-07-24 19:36:36,465 - INFO - pdays: int64 = -1
+2025-07-24 19:36:36,466 - INFO - previous: int64 = 0
+2025-07-24 19:36:36,466 - INFO - poutcome: object = unknown
+2025-07-24 19:36:36,466 - INFO - month_text: object = jan
+2025-07-24 19:36:36,466 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:36:36,466 - INFO - last_contact_category: category = never
+2025-07-24 19:36:36,467 - INFO - previous_contact_category: category = never_contacted
+2025-07-24 19:36:36,467 - INFO - Applying saved preprocessor
+2025-07-24 19:36:36,477 - INFO - Making prediction
+2025-07-24 19:36:36,979 - INFO - Prediction completed: 0.0857
+2025-07-24 19:36:50,941 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:36:51,180 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:36:51,196 - INFO - Model loaded successfully
+2025-07-24 19:36:51,200 - INFO - Preprocessor loaded successfully
+2025-07-24 19:36:51,200 - INFO - Preprocessor transformers:
+2025-07-24 19:36:51,200 - INFO - Transformer: num
+2025-07-24 19:36:51,200 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:36:51,200 - INFO - Type: Pipeline
+2025-07-24 19:36:51,200 - INFO - Transformer: cat
+2025-07-24 19:36:51,200 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:36:51,203 - INFO - Type: Pipeline
+2025-07-24 19:36:51,203 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:36:51,203 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:36:51,234 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:36:51,255 - INFO - Feature types before preprocessor:
+2025-07-24 19:36:51,256 - INFO - age: int64 = 30
+2025-07-24 19:36:51,257 - INFO - job: object = admin.
+2025-07-24 19:36:51,258 - INFO - marital: object = married
+2025-07-24 19:36:51,258 - INFO - education: object = primary
+2025-07-24 19:36:51,258 - INFO - default: object = yes
+2025-07-24 19:36:51,259 - INFO - balance: int64 = 0
+2025-07-24 19:36:51,259 - INFO - housing: object = yes
+2025-07-24 19:36:51,259 - INFO - loan: object = yes
+2025-07-24 19:36:51,260 - INFO - contact: object = cellular
+2025-07-24 19:36:51,260 - INFO - day: int64 = 15
+2025-07-24 19:36:51,261 - INFO - month: object = 1
+2025-07-24 19:36:51,261 - INFO - duration: int64 = 2154
+2025-07-24 19:36:51,261 - INFO - campaign: int64 = 1
+2025-07-24 19:36:51,262 - INFO - pdays: int64 = -1
+2025-07-24 19:36:51,262 - INFO - previous: int64 = 0
+2025-07-24 19:36:51,263 - INFO - poutcome: object = unknown
+2025-07-24 19:36:51,263 - INFO - month_text: object = jan
+2025-07-24 19:36:51,264 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:36:51,265 - INFO - last_contact_category: category = never
+2025-07-24 19:36:51,265 - INFO - previous_contact_category: category = never_contacted
+2025-07-24 19:36:51,265 - INFO - Applying saved preprocessor
+2025-07-24 19:36:51,285 - INFO - Making prediction
+2025-07-24 19:36:51,513 - INFO - Prediction completed: 0.0857
+2025-07-24 19:36:57,808 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:36:57,980 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:36:57,990 - INFO - Model loaded successfully
+2025-07-24 19:36:57,992 - INFO - Preprocessor loaded successfully
+2025-07-24 19:36:57,992 - INFO - Preprocessor transformers:
+2025-07-24 19:36:57,993 - INFO - Transformer: num
+2025-07-24 19:36:57,993 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:36:57,994 - INFO - Type: Pipeline
+2025-07-24 19:36:57,994 - INFO - Transformer: cat
+2025-07-24 19:36:57,994 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:36:57,994 - INFO - Type: Pipeline
+2025-07-24 19:36:57,995 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:36:57,995 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:36:58,017 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:36:58,032 - INFO - Feature types before preprocessor:
+2025-07-24 19:36:58,032 - INFO - age: int64 = 30
+2025-07-24 19:36:58,032 - INFO - job: object = admin.
+2025-07-24 19:36:58,032 - INFO - marital: object = married
+2025-07-24 19:36:58,033 - INFO - education: object = primary
+2025-07-24 19:36:58,034 - INFO - default: object = no
+2025-07-24 19:36:58,034 - INFO - balance: int64 = 0
+2025-07-24 19:36:58,034 - INFO - housing: object = yes
+2025-07-24 19:36:58,034 - INFO - loan: object = yes
+2025-07-24 19:36:58,035 - INFO - contact: object = cellular
+2025-07-24 19:36:58,035 - INFO - day: int64 = 15
+2025-07-24 19:36:58,035 - INFO - month: object = 1
+2025-07-24 19:36:58,035 - INFO - duration: int64 = 2154
+2025-07-24 19:36:58,036 - INFO - campaign: int64 = 1
+2025-07-24 19:36:58,036 - INFO - pdays: int64 = -1
+2025-07-24 19:36:58,036 - INFO - previous: int64 = 0
+2025-07-24 19:36:58,036 - INFO - poutcome: object = unknown
+2025-07-24 19:36:58,037 - INFO - month_text: object = jan
+2025-07-24 19:36:58,037 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:36:58,037 - INFO - last_contact_category: category = never
+2025-07-24 19:36:58,037 - INFO - previous_contact_category: category = never_contacted
+2025-07-24 19:36:58,038 - INFO - Applying saved preprocessor
+2025-07-24 19:36:58,048 - INFO - Making prediction
+2025-07-24 19:36:58,198 - INFO - Prediction completed: 0.0148
+2025-07-24 19:37:01,355 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:37:01,535 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:37:01,550 - INFO - Model loaded successfully
+2025-07-24 19:37:01,551 - INFO - Preprocessor loaded successfully
+2025-07-24 19:37:01,553 - INFO - Preprocessor transformers:
+2025-07-24 19:37:01,553 - INFO - Transformer: num
+2025-07-24 19:37:01,553 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:37:01,554 - INFO - Type: Pipeline
+2025-07-24 19:37:01,554 - INFO - Transformer: cat
+2025-07-24 19:37:01,555 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:01,556 - INFO - Type: Pipeline
+2025-07-24 19:37:01,556 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:37:01,557 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:37:01,577 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:01,593 - INFO - Feature types before preprocessor:
+2025-07-24 19:37:01,593 - INFO - age: int64 = 30
+2025-07-24 19:37:01,594 - INFO - job: object = admin.
+2025-07-24 19:37:01,594 - INFO - marital: object = married
+2025-07-24 19:37:01,594 - INFO - education: object = primary
+2025-07-24 19:37:01,594 - INFO - default: object = no
+2025-07-24 19:37:01,595 - INFO - balance: int64 = 0
+2025-07-24 19:37:01,595 - INFO - housing: object = yes
+2025-07-24 19:37:01,595 - INFO - loan: object = yes
+2025-07-24 19:37:01,596 - INFO - contact: object = cellular
+2025-07-24 19:37:01,596 - INFO - day: int64 = 15
+2025-07-24 19:37:01,596 - INFO - month: object = 1
+2025-07-24 19:37:01,597 - INFO - duration: int64 = 2154
+2025-07-24 19:37:01,597 - INFO - campaign: int64 = 12
+2025-07-24 19:37:01,598 - INFO - pdays: int64 = -1
+2025-07-24 19:37:01,598 - INFO - previous: int64 = 0
+2025-07-24 19:37:01,598 - INFO - poutcome: object = unknown
+2025-07-24 19:37:01,599 - INFO - month_text: object = jan
+2025-07-24 19:37:01,599 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:37:01,599 - INFO - last_contact_category: category = never
+2025-07-24 19:37:01,600 - INFO - previous_contact_category: category = never_contacted
+2025-07-24 19:37:01,600 - INFO - Applying saved preprocessor
+2025-07-24 19:37:01,611 - INFO - Making prediction
+2025-07-24 19:37:01,827 - INFO - Prediction completed: 0.1460
+2025-07-24 19:37:04,762 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:37:04,934 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:37:04,945 - INFO - Model loaded successfully
+2025-07-24 19:37:04,946 - INFO - Preprocessor loaded successfully
+2025-07-24 19:37:04,947 - INFO - Preprocessor transformers:
+2025-07-24 19:37:04,947 - INFO - Transformer: num
+2025-07-24 19:37:04,947 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:37:04,947 - INFO - Type: Pipeline
+2025-07-24 19:37:04,948 - INFO - Transformer: cat
+2025-07-24 19:37:04,948 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:04,948 - INFO - Type: Pipeline
+2025-07-24 19:37:04,949 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:37:04,949 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:37:04,966 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:04,982 - INFO - Feature types before preprocessor:
+2025-07-24 19:37:04,982 - INFO - age: int64 = 30
+2025-07-24 19:37:04,984 - INFO - job: object = admin.
+2025-07-24 19:37:04,984 - INFO - marital: object = married
+2025-07-24 19:37:04,984 - INFO - education: object = primary
+2025-07-24 19:37:04,984 - INFO - default: object = no
+2025-07-24 19:37:04,985 - INFO - balance: int64 = 0
+2025-07-24 19:37:04,985 - INFO - housing: object = yes
+2025-07-24 19:37:04,985 - INFO - loan: object = yes
+2025-07-24 19:37:04,985 - INFO - contact: object = cellular
+2025-07-24 19:37:04,985 - INFO - day: int64 = 15
+2025-07-24 19:37:04,987 - INFO - month: object = 1
+2025-07-24 19:37:04,987 - INFO - duration: int64 = 2154
+2025-07-24 19:37:04,987 - INFO - campaign: int64 = 12
+2025-07-24 19:37:04,987 - INFO - pdays: int64 = 115
+2025-07-24 19:37:04,987 - INFO - previous: int64 = 0
+2025-07-24 19:37:04,988 - INFO - poutcome: object = unknown
+2025-07-24 19:37:04,988 - INFO - month_text: object = jan
+2025-07-24 19:37:04,989 - INFO - was_previously_contacted: float64 = 1.0
+2025-07-24 19:37:04,989 - INFO - last_contact_category: category = long_ago
+2025-07-24 19:37:04,989 - INFO - previous_contact_category: category = never_contacted
+2025-07-24 19:37:04,989 - INFO - Applying saved preprocessor
+2025-07-24 19:37:04,998 - INFO - Making prediction
+2025-07-24 19:37:05,128 - WARNING - 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001A6E063B2E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-07-24 19:37:05,152 - INFO - Prediction completed: 0.0376
+2025-07-24 19:37:10,598 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:37:10,821 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:37:10,857 - INFO - Model loaded successfully
+2025-07-24 19:37:10,860 - INFO - Preprocessor loaded successfully
+2025-07-24 19:37:10,861 - INFO - Preprocessor transformers:
+2025-07-24 19:37:10,861 - INFO - Transformer: num
+2025-07-24 19:37:10,861 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:37:10,862 - INFO - Type: Pipeline
+2025-07-24 19:37:10,862 - INFO - Transformer: cat
+2025-07-24 19:37:10,862 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:10,862 - INFO - Type: Pipeline
+2025-07-24 19:37:10,863 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:37:10,863 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:37:10,889 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:10,906 - INFO - Feature types before preprocessor:
+2025-07-24 19:37:10,907 - INFO - age: int64 = 30
+2025-07-24 19:37:10,907 - INFO - job: object = admin.
+2025-07-24 19:37:10,907 - INFO - marital: object = married
+2025-07-24 19:37:10,907 - INFO - education: object = primary
+2025-07-24 19:37:10,908 - INFO - default: object = no
+2025-07-24 19:37:10,908 - INFO - balance: int64 = 0
+2025-07-24 19:37:10,908 - INFO - housing: object = yes
+2025-07-24 19:37:10,908 - INFO - loan: object = yes
+2025-07-24 19:37:10,910 - INFO - contact: object = cellular
+2025-07-24 19:37:10,910 - INFO - day: int64 = 15
+2025-07-24 19:37:10,910 - INFO - month: object = 1
+2025-07-24 19:37:10,910 - INFO - duration: int64 = 2154
+2025-07-24 19:37:10,910 - INFO - campaign: int64 = 12
+2025-07-24 19:37:10,910 - INFO - pdays: int64 = -1
+2025-07-24 19:37:10,911 - INFO - previous: int64 = 5
+2025-07-24 19:37:10,911 - INFO - poutcome: object = unknown
+2025-07-24 19:37:10,911 - INFO - month_text: object = jan
+2025-07-24 19:37:10,912 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:37:10,912 - INFO - last_contact_category: category = never
+2025-07-24 19:37:10,913 - INFO - previous_contact_category: category = few_times
+2025-07-24 19:37:10,913 - INFO - Applying saved preprocessor
+2025-07-24 19:37:10,925 - INFO - Making prediction
+2025-07-24 19:37:11,088 - WARNING - 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000001A6E063B2E0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2025-07-24 19:37:11,113 - INFO - Prediction completed: 0.0711
+2025-07-24 19:37:15,926 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:37:16,169 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:37:16,181 - INFO - Model loaded successfully
+2025-07-24 19:37:16,184 - INFO - Preprocessor loaded successfully
+2025-07-24 19:37:16,184 - INFO - Preprocessor transformers:
+2025-07-24 19:37:16,184 - INFO - Transformer: num
+2025-07-24 19:37:16,184 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:37:16,184 - INFO - Type: Pipeline
+2025-07-24 19:37:16,185 - INFO - Transformer: cat
+2025-07-24 19:37:16,185 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:16,185 - INFO - Type: Pipeline
+2025-07-24 19:37:16,186 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:37:16,186 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:37:16,212 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:16,231 - INFO - Feature types before preprocessor:
+2025-07-24 19:37:16,232 - INFO - age: int64 = 30
+2025-07-24 19:37:16,232 - INFO - job: object = admin.
+2025-07-24 19:37:16,232 - INFO - marital: object = married
+2025-07-24 19:37:16,234 - INFO - education: object = primary
+2025-07-24 19:37:16,234 - INFO - default: object = no
+2025-07-24 19:37:16,234 - INFO - balance: int64 = 0
+2025-07-24 19:37:16,234 - INFO - housing: object = yes
+2025-07-24 19:37:16,237 - INFO - loan: object = yes
+2025-07-24 19:37:16,238 - INFO - contact: object = cellular
+2025-07-24 19:37:16,238 - INFO - day: int64 = 15
+2025-07-24 19:37:16,240 - INFO - month: object = 1
+2025-07-24 19:37:16,241 - INFO - duration: int64 = 2154
+2025-07-24 19:37:16,241 - INFO - campaign: int64 = 12
+2025-07-24 19:37:16,242 - INFO - pdays: int64 = -1
+2025-07-24 19:37:16,242 - INFO - previous: int64 = 5
+2025-07-24 19:37:16,243 - INFO - poutcome: object = success
+2025-07-24 19:37:16,243 - INFO - month_text: object = jan
+2025-07-24 19:37:16,244 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:37:16,244 - INFO - last_contact_category: category = never
+2025-07-24 19:37:16,245 - INFO - previous_contact_category: category = few_times
+2025-07-24 19:37:16,245 - INFO - Applying saved preprocessor
+2025-07-24 19:37:16,261 - INFO - Making prediction
+2025-07-24 19:37:16,500 - INFO - Prediction completed: 0.4839
+2025-07-24 19:37:34,032 - INFO - Loading neural network model and preprocessor
+2025-07-24 19:37:34,208 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-24 19:37:34,219 - INFO - Model loaded successfully
+2025-07-24 19:37:34,220 - INFO - Preprocessor loaded successfully
+2025-07-24 19:37:34,220 - INFO - Preprocessor transformers:
+2025-07-24 19:37:34,221 - INFO - Transformer: num
+2025-07-24 19:37:34,221 - INFO - Columns: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted']
+2025-07-24 19:37:34,221 - INFO - Type: Pipeline
+2025-07-24 19:37:34,222 - INFO - Transformer: cat
+2025-07-24 19:37:34,222 - INFO - Columns: ['job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'poutcome', 'month_text', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:34,223 - INFO - Type: Pipeline
+2025-07-24 19:37:34,223 - INFO - Expected features: ['age', 'balance', 'day', 'month', 'campaign', 'pdays', 'previous', 'was_previously_contacted', 'job_admin', 'job_blue-collar', 'job_entrepreneur', 'job_housemaid', 'job_management', 'job_retired', 'job_self-employed', 'job_services', 'job_student', 'job_technician', 'job_unemployed', 'marital_divorced', 'marital_married', 'marital_single', 'education_primary', 'education_secondary', 'education_tertiary', 'default_no', 'default_yes', 'housing_no', 'housing_yes', 'loan_no', 'loan_yes', 'contact_cellular', 'contact_telephone', 'poutcome_failure', 'poutcome_other', 'poutcome_success', 'poutcome_unknown', 'month_text_apr', 'month_text_aug', 'month_text_dec', 'month_text_feb', 'month_text_jan', 'month_text_jul', 'month_text_jun', 'month_text_mar', 'month_text_may', 'month_text_nov', 'month_text_oct', 'month_text_sep', 'last_contact_category_long_ago', 'last_contact_category_moderate', 'last_contact_category_never', 'last_contact_category_recent', 'previous_contact_category_contacted_once', 'previous_contact_category_few_times', 'previous_contact_category_many_times', 'previous_contact_category_never_contacted']
+2025-07-24 19:37:34,224 - INFO - Input features before preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome']
+2025-07-24 19:37:34,240 - INFO - Features after custom preprocessing: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'month_text', 'was_previously_contacted', 'last_contact_category', 'previous_contact_category']
+2025-07-24 19:37:34,257 - INFO - Feature types before preprocessor:
+2025-07-24 19:37:34,258 - INFO - age: int64 = 30
+2025-07-24 19:37:34,258 - INFO - job: object = management
+2025-07-24 19:37:34,258 - INFO - marital: object = married
+2025-07-24 19:37:34,259 - INFO - education: object = tertiary
+2025-07-24 19:37:34,259 - INFO - default: object = no
+2025-07-24 19:37:34,259 - INFO - balance: int64 = 10000
+2025-07-24 19:37:34,259 - INFO - housing: object = yes
+2025-07-24 19:37:34,260 - INFO - loan: object = yes
+2025-07-24 19:37:34,260 - INFO - contact: object = cellular
+2025-07-24 19:37:34,261 - INFO - day: int64 = 15
+2025-07-24 19:37:34,261 - INFO - month: object = 1
+2025-07-24 19:37:34,261 - INFO - duration: int64 = 2154
+2025-07-24 19:37:34,261 - INFO - campaign: int64 = 12
+2025-07-24 19:37:34,262 - INFO - pdays: int64 = -1
+2025-07-24 19:37:34,262 - INFO - previous: int64 = 5
+2025-07-24 19:37:34,262 - INFO - poutcome: object = success
+2025-07-24 19:37:34,263 - INFO - month_text: object = jan
+2025-07-24 19:37:34,263 - INFO - was_previously_contacted: float64 = 0.0
+2025-07-24 19:37:34,263 - INFO - last_contact_category: category = never
+2025-07-24 19:37:34,263 - INFO - previous_contact_category: category = few_times
+2025-07-24 19:37:34,264 - INFO - Applying saved preprocessor
+2025-07-24 19:37:34,275 - INFO - Making prediction
+2025-07-24 19:37:34,415 - INFO - Prediction completed: 0.7413
