@@ -114,7 +114,6 @@ We’re using Python and tools like scikit-learn, xgboost, and shap to build and
 ## Requirements
 ![Data Analysis](https://img.shields.io/badge/-Data_analysis-informational?style=for-the-badge&logo=GooglePodcasts&logoColor=white&color=FFC98B)
 ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue)
-![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue)
 ![Pandas](https://img.shields.io/badge/pandas%20-%23150458.svg?&style=for-the-badge&logo=pandas&logoColor=white)&nbsp;
 ![NumPy](https://img.shields.io/badge/numpy%20-%23013243.svg?&style=for-the-badge&logo=numpy&logoColor=white)&nbsp;
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
@@ -453,6 +452,15 @@ If you apply SMOTE or resampling  **before splitting**, your test set will conta
 
 
 ## Model Training and Evaluation - Jennifer
+
+
+This project implements a binary classification model using supervised learning techniques. The dataset was split into training and test sets to assess the model’s ability to generalize to unseen data. Feature engineering steps such as scaling and encoding were applied to improve data quality.
+
+The model was trained using Logistic Regression, Random Forest, Neural Network (*to select*) and optimized with optimizer, Adam (*if relevant*). Hyperparameters were tuned via grid search, cross-validation, and training was performed using libraries like scikit-learn, pandas, numpy and TensorFlow.
+
+Performance was evaluated using accuracy, precision, recall, and F1-score, as well as confusion matrix visualization. All experiments are reproducible—see the xxxx section  to train the model and reproduce the results. To promote transparency and trust, interpretability analysis was conducted using techniques such as feature importance, SHAP. These methods provide insights into the model’s decision-making process and highlight the most influential features to understand what drives client behavior and supports more informed decision-making.
+
+
 
 ## 🔍 Model Evaluation – Logistic Regression (Baseline)  - Feihong
 
