@@ -3,8 +3,10 @@
 
 Data Science Institute - Cohort 6 - ML Team 07  Project Report
 
+---
 
 **Members**  
+
 Rajthilak Chandran  
 Feihong Nan  
 Darling, Oscanoa  
@@ -12,6 +14,7 @@ Rehan, Ahmed
 Rituparna, Bera  
 Jenniffer Carolina, Triana Martinez
 
+---
 
 ## Executive Summary
 
@@ -54,55 +57,46 @@ Core objectives include:
 
 In an evolving digital landscape, the ability to prioritize high-value leads, and back those decisions with data creates measurable advantages in operational efficiency, customer acquisition, and strategic growth.
 
-# Project Structure
+---
+
+## Project Structure
 
 ![alt text](image-2.png)
 
 ![alt text](image-3.png)
 
-# Project Overview
+---
 
+## Project Overview
 
 **Who are your stakeholders and why do they care about your project?**
 
-
 ***Stakeholders***
-
 
 Marketing Teams: Want to optimize campaign ROI
 
-
 Sales Teams: Need qualified leads
-
 
 Executives: Focused on strategic growth and cost reduction
 
-
 Clients: Benefit from more relevant and personalized outreach
-
 
 **How will you answer your business question with your chosen dataset?**
 
-
 We’re using the Bank Marketing dataset from UCI, which contains detailed information about clients, their previous interactions with marketing campaigns, and several economic indicators. Our goal is to help the bank improve its conversion rate, the percentage of contacted clients who end up subscribing to a term deposit.
-
 
 To do this, we started by exploring the dataset to uncover patterns and relationships that might influence a client’s decision. We then cleaned and prepared the data, making sure it was ready for modeling by handling categorical variables and addressing class imbalance.
 Next, we built machine learning models to predict whether a client is likely to subscribe. These predictions allow the bank to focus its outreach on individuals who are more likely to respond positively. We evaluated our models using metrics like precision, recall, F1-score, and ROC-AUC to ensure they’re both accurate and practical.
 
-
 To make our results interpretable, we used SHAP values to explain which features are most influential in the model’s predictions. This helps the bank understand what drives client behavior and supports more informed decision-making.
 
-
 By identifying high-potential leads, our approach directly supports the bank’s ability to improve its conversion rate, which is a key performance indicator for marketing success.
-
 
 **What are the risks and uncertainties?**
 
 We’re aware that certain features like call duration might inflate our model’s performance, so we’re testing models with and without it to make sure our predictions are realistic. We’re also dealing with class imbalance, which could affect how well our model identifies potential subscribers. Our goal is to build a model that not only performs well technically but also helps improve the conversion rate in a way that’s reliable and scalable.
 
-
-> #### 🔍 Data and Modeling Risks
+> #### Data and Modeling Risks
 > 
 > -   **Imbalanced Target Variable**: The dataset has a significant class imbalance (i.e., many more "no" responses than "yes"), which may bias the model toward the majority class.
 >     
@@ -115,12 +109,12 @@ We’re aware that certain features like call duration might inflate our model�
 
 **What methods and technologies will you use?**
 
-
 We’re using Python and tools like scikit-learn, xgboost, and shap to build and explain our models. Everything is tracked in GitHub, and we’re following best practices for collaboration. Our reproducible notebook shows how our model can be used to predict outcomes and support decisions that directly impact the bank’s conversion rate, a key metric for campaign success.
 
 **Planned Workflow and Technologies**
 
-> #### 🛠️ Methodology and Workflow
+
+> #### Methodology and Workflow
 > 
 > -   **Data Preprocessing**: Clean categorical variables, handle outliers, encode features, drop leakage columns, and filter to meaningful segments (e.g., previously contacted clients).
 >     
@@ -132,6 +126,8 @@ We’re using Python and tools like scikit-learn, xgboost, and shap to build and
 >     
 > -   **Technology Stack**: Python (Pandas, NumPy, Seaborn, Scikit-learn, XGBoost), Jupyter Notebooks
 >     
+
+---
 
 ## Requirements
 ![Data Analysis](https://img.shields.io/badge/-Data_analysis-informational?style=for-the-badge&logo=GooglePodcasts&logoColor=white&color=FFC98B)
@@ -145,6 +141,7 @@ We’re using Python and tools like scikit-learn, xgboost, and shap to build and
 
 This project relies on a suite of Python libraries and frameworks that support end-to-end data science workflows, including data preprocessing, machine learning, model evaluation, interpretability, and visualization:
 
+---
 
 ### **Core Libraries**
 
@@ -157,10 +154,10 @@ This project relies on a suite of Python libraries and frameworks that support e
 
 
 * **scikit-learn** – Provides robust tools for supervised learning, preprocessing, model selection, and validation. Notable components:  
-  * Estimators: `LogisticRegression`, `RandomForestClassifier`, `SVC`, `KNeighborsClassifier`, `BernoulliNB`  
+  * Estimators: `RandomForestClassifier`, `DecisionTree`, `NeuralNetwork`  
   * Pipelines and Transformers: `Pipeline`, `ColumnTransformer`, `StandardScaler`, `OneHotEncoder`  
-  * Evaluation and Tuning: `accuracy_score`, `confusion_matrix`, `classification_report`, `mean_squared_error`, `GridSearchCV`, `StratifiedKFold`  
-* **xgboost** – Implements the scalable and performant `XGBClassifier` for gradient boosting  
+  * Evaluation and Tuning: `accuracy_score`, `confusion_matrix`, `classification_report`, `mean_squared_error`, `GridSearchCV`, `StratifiedKFold`
+* **Keras/Tensor Flow** - Enable deep learning model development and training with flexible neural network building blocks
 * **lightgbm** – Provides high-speed gradient boosting via `LGBMClassifier`, optimized for large datasets  
 * **imblearn (imbalanced-learn)** – Offers strategies for handling imbalanced data, including `SMOTE` and `SMOTENC`
 
@@ -187,7 +184,9 @@ This project relies on a suite of Python libraries and frameworks that support e
 * **os** – Provides operating system interface for file and environment management  
 * **pickle** – Used to serialize and persist Python objects (e.g., trained models)  
 * **Pathlib** – Offers intuitive, object-oriented file system navigation and path handling
+* **streamlit** - Transforms Python scripts into interactive web apps for data exploration and visualization
 
+---
 
 ## Dataset Overview - Understanding the Raw Data
 **URL**: [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing) https://archive.ics.uci.edu/dataset/222/bank+marketing
@@ -213,22 +212,20 @@ This dataset is related to direct marketing campaigns (phone calls) of a Portugu
 * Client attributes: age, job, marital, education, default, housing, loan
 * Campaign-related: contact, month, day_of_week, duration
 
+---
 
-# 📊 Exploratory Data Analysis (EDA): Bank Marketing Campaign Datasets
+## Exploratory Data Analysis (EDA): Bank Marketing Campaign Datasets
 
 We analyze two datasets from a Portuguese bank's direct marketing campaigns to understand customer behavior and campaign effectiveness in subscribing to term deposits.
 
----
-## 📦 Dataset Overview
+## Dataset Overview
 
 | Dataset                  | Rows   | Columns | Notes                                            |
 |--------------------------|--------|---------|--------------------------------------------------|
 | `bank-full.csv`          | 45,211 | 17      | Older dataset; fewer macroeconomic indicators    |
 | `bank-additional-full.csv` | 41,188 | 21      | Richer dataset; includes economic context fields |
 
----
-
-## ✅ Target Variable: `y`
+## Target Variable: `y`
 
 The target indicates whether a client subscribed to a term deposit.
 
@@ -238,11 +235,9 @@ The target indicates whether a client subscribed to a term deposit.
 
 ![alt text](image-4.png)
 
-> 🟠 **Modeling Implication**: Class imbalance must be addressed (e.g., via resampling or class-weighting).
+> **Modeling Implication**: Class imbalance must be addressed (e.g., via resampling or class-weighting).
 
----
-
-## 🧮 Numeric Feature Overview
+## Numeric Feature Overview
 
 | Feature   | Mean    | Min   | Max    | Notes                                                                 |
 |-----------|---------|-------|--------|-----------------------------------------------------------------------|
@@ -257,7 +252,7 @@ The target indicates whether a client subscribed to a term deposit.
 
 ---
 
-## 📈 Feature Distributions
+## Feature Distributions
 
 ### Age Distribution
 ```python
@@ -273,7 +268,7 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 
 ---
 
-## 🔢 Categorical Variables
+## Categorical Variables
 
 - **Job**: 12 categories (e.g., management, technician, blue-collar)
 - **Marital**: married, single, divorced
@@ -283,11 +278,11 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 - **Month**: Campaign month (e.g., may, jul, aug)
 - **Poutcome**: Outcome of previous campaign (success, failure, unknown, other)
 
-> 🧠 **Note**: Categorical variables will need encoding (e.g., one-hot or label encoding).
+> **Note**: Categorical variables will need encoding (e.g., one-hot or label encoding).
 
 ---
 
-## 🔗 Correlation Analysis
+## Correlation Analysis
 
 ### `bank-full.csv` Correlation Matrix
 
@@ -300,15 +295,13 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 | pdays   | -0.024    | 0.003     | -0.002    | -0.089    | 1.00      | 0.455     |
 | previous| 0.001     | 0.017     | 0.001     | -0.033    | 0.455     | 1.00      |
 
-> 🔍 **Key Insights**:
+> **Key Insights**:
 - **pdays** and **previous** show a **moderate correlation** (0.455)
 - Most other pairs have **weak or negligible correlation** (|r| < 0.1)
 
-----------
-
 **Summary of Exploratory Data Analysis**
 
-> #### 📊 EDA Highlights
+> #### EDA Highlights
 > 
 > -   **Contact History Analysis**: Clients with a successful  `poutcome`  in previous campaigns are far more likely to subscribe again.
 >     
@@ -323,9 +316,10 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 * Duration is a strong predictor but should be excluded if the goal is to predict before the call is made.
 * Many categorical variables: will require encoding (e.g., one-hot or label encoding)
 * Outliers: Significant outliers in balance and duration should be handled or scaled.
+
 ---
 
-## 🧼 Data Quality & Preprocessing (Pending)
+## Data Quality & Preprocessing (Pending)
 - Missing values are encoded (e.g., `unknown`)
 - Requires:
   - Encoding of categorical variables
@@ -339,18 +333,13 @@ sns.histplot(data=bank_additional_full, x='duration', bins=30, kde=True)
 
 The dataset underwent extensive cleaning and transformation to ensure quality input for modeling. Below are the key steps:
 
-----------
-
-### 🔹 1.  **Handling Missing and Invalid Data**
+### 1.  **Handling Missing and Invalid Data**
 
 -   Verified that there are  **no null values**  in the dataset.
     
 -   Clarified that  `poutcome = 'nonexistent'`  and  `pdays = 999`  do  **not represent missing values**, but encode specific business logic (e.g., not contacted recently).
-    
 
-----------
-
-### 🔹 2.  **Column-Specific Cleaning**
+### 2.  **Column-Specific Cleaning**
 
 -   **`job`**: Standardized labels (e.g., replaced  `'admin.'`  with  `'admin'`).
     
@@ -365,11 +354,8 @@ The dataset underwent extensive cleaning and transformation to ensure quality in
 -   **`campaign`**: Limited outlier values above the threshold (`> 6`) and capped lower bounds at 0.
     
 -   **`pdays`**: Cleaned by categorizing based on whether the client was contacted before and how long ago.
-    
 
-----------
-
-### 🔹 3.  **Feature Engineering**
+### 3.  **Feature Engineering**
 
 -   **`was_previously_contacted`**: Flag created based on  `pdays`  and  `previous`.
     
@@ -384,11 +370,8 @@ The dataset underwent extensive cleaning and transformation to ensure quality in
     -   `many_times`
         
 -   These enrich the model with campaign history context.
-    
 
-----------
-
-### 🔹 4.  **Target Variable and Subsetting**
+### 4.  **Target Variable and Subsetting**
 
 -   Filtered data to include only clients with  `was_previously_contacted = 1`  for focused modeling.
     
@@ -399,14 +382,13 @@ The dataset underwent extensive cleaning and transformation to ensure quality in
     -   `'failure'`  if  `y = no`
         
 
-----------
-
-### 🔹 5.  **Data Imbalance Analysis**
+### 5.  **Data Imbalance Analysis**
 
 -   Identified imbalance in  `y`  distribution (especially skewed toward "no").
     
 -   Planned to address using resampling (e.g., SMOTE) or class weights during model training.
 
+---
 
 ## Model Development
 
@@ -420,18 +402,18 @@ We developed a streamlined pipeline to efficiently handle both preprocessing and
 
 We trained and evaluated the following models:
 
-•	Logistic Regression
 •	Decision Tree
 •	Random Forest
 •	Neural Network (built using Keras)
 
 After comparing their performance on metrics like accuracy, precision, recall, and F1-score, the Neural Network model outperformed the others and was selected as the final model for deployment.
 
+---
 
 ## Handling Imbalanced Data
 
 
-### 1.  **🔹 Data Preparation & Cleaning**
+### 1.  **Data Preparation & Cleaning**
 
 -   Handle missing values, outliers, data types
     
@@ -444,11 +426,9 @@ After comparing their performance on metrics like accuracy, precision, recall, a
 -   Quick Cleaning Tool: The `quick_clean.py` script provides a lightweight cleaning solution for exploratory testing or small-scale preprocessing.  
     
 -   ➤  **No balancing here**  — To ensure data quality and structure
-    
 
-----------
 
-### 2.  **🔹 Modeling Phase (Train/Test Split or CV)**
+### 2.  **Modeling Phase (Train/Test Split or CV)**
 
 -   After splitting into training and test sets (or folds for CV),  **we can apply class balancing on the training data**.
     
@@ -461,70 +441,28 @@ After comparing their performance on metrics like accuracy, precision, recall, a
     
 -   **Random undersampling**
     
--   **Class weights**  (e.g., in LogisticRegression, XGBoost)
-    
 -   **Threshold tuning**
     
 
-----------
-
-### ⚠️ Why Not Balance Before Splitting?
+### Why Not Balance Before Splitting?
 
 If you apply SMOTE or resampling  **before splitting**, your test set will contain synthetic samples, which  **invalidates evaluation metrics**  and  **overestimates performance**.
 
+---
 
-## Model Training and Evaluation - Jennifer
+## Model Training and Evaluation
 
 
 This project implements a binary classification model using supervised learning techniques. The dataset was split into training and test sets to assess the model’s ability to generalize to unseen data. Feature engineering steps such as scaling and encoding were applied to improve data quality.
 
-The model was trained using Logistic Regression, Random Forest, Neural Network (*to select*) and optimized with optimizer, Adam (*if relevant*). Hyperparameters were tuned via grid search, cross-validation, and training was performed using libraries like scikit-learn, pandas, numpy and TensorFlow.
+The model was trained using Random Forest, Decision Tree, Neural Network and optimized with optimizer. Hyperparameters were tuned via grid search, cross-validation, and training was performed using libraries like scikit-learn, pandas, numpy and TensorFlow.
 
 Performance was evaluated using accuracy, precision, recall, and F1-score, as well as confusion matrix visualization. All experiments are reproducible—see the xxxx section  to train the model and reproduce the results. To promote transparency and trust, interpretability analysis was conducted using techniques such as feature importance, SHAP. These methods provide insights into the model’s decision-making process and highlight the most influential features to understand what drives client behavior and supports more informed decision-making.
 
-
-
-## 🔍 Model Evaluation – Logistic Regression (Baseline)  - Feihong
-
-We trained a baseline **Logistic Regression** model to predict whether a client will subscribe to a term deposit (`y`).
-
-### 📊 Evaluation Results
-
-**Confusion Matrix**:
-
-[[10828    137]
-
-[ 1083   309]]
-
-**Classification Report**:
-
-| Class | Precision | Recall | F1-score | Support |
-|-------|-----------|--------|----------|---------|
-| **0 (no)**  | 0.91      | 0.99   | 0.95     | 10,965  |
-| **1 (yes)** | 0.69      | 0.22   | 0.34     | 1,392   |
-
-- **Overall Accuracy**: 90%  
-- **Macro Avg F1**: 0.64  
-- **Weighted Avg F1**: 0.88
-
-### 📝 Key Observations
-
-- The model performs well for the **majority class** (`no`), but poorly on the **minority class** (`yes`) due to significant **class imbalance**.
-- Despite high overall accuracy, the **low recall for the 'yes' class (0.22)** indicates many false negatives.
-- Logistic Regression provides a **simple, interpretable baseline** for further modeling.
-
-### 🛠️ Recommendations for Improvement
-
-- **Handle class imbalance**:
-  - Use `class_weight='balanced'`
-  - Apply oversampling techniques like **SMOTE**
-- **Explore advanced models**:
-  - Try **Random Forest**, **XGBoost**, or **Gradient Boosting** for better handling of complex patterns.
-- **Use alternative evaluation metrics**:
-  - Include **precision-recall curves** and **ROC-AUC** to better assess performance on the minority class.
-
+---
 
 ## Model Deployment and Interpretation
+
 After completing our data analysis, preprocessing, and model training phases, we will make our machine learning solution accessible and actionable for bank marketing teams. Our deployment strategy focuses on creating a user-friendly interface that translates model predictions into real business value.
 
 ### Deployment Strategy
@@ -597,7 +535,7 @@ The Streamlit app shows both the raw customer data and the processed features th
 
 We're also prepared to integrate SHAP values if time permits, which would show exactly how each customer feature contributes to their specific prediction score.
 
-### Production Considerations (Future Scope)
+### Production Considerations
 
 While our current focus is on demonstrating model effectiveness through local deployment, we recognize that scaling to production involves additional complexity.
 
@@ -645,11 +583,13 @@ The deployed application serves as a proof-of-concept that demonstrates how mach
 
 Based on initial results and user feedback, we can then decide whether to invest in full production deployment with MLOPs implementation and cloud infrastructure.
 
-## 📊 Further Model Assessment
+---
+
+## Further Model Assessment
 
 Our team evaluated three supervised learning models; **Decision Tree**, **Random Forest**, and a **Neural Network**, to predict client subscription outcomes in a bank telemarketing campaign. Each model was assessed based on accuracy, precision, recall, and F1 score using a balanced test dataset.
 
-### 🧪 Final Evaluation Metrics
+### Final Evaluation Metrics
 
 | Model            | Accuracy | Precision | Recall | F1 Score |
 |------------------|----------|-----------|--------|----------|
@@ -659,7 +599,7 @@ Our team evaluated three supervised learning models; **Decision Tree**, **Random
 
 > *Neural Network metrics reflect final test evaluation across 15,862 samples.
 
-### 📉 Model Comparison & Insights
+### Model Comparison & Insights
 
 - **Decision Tree** served as an interpretable baseline but underperformed on recall and precision — resulting in high false negative rates.
 - **Random Forest** significantly boosted minority class detection and balanced precision and recall, making it well-suited for general campaign deployment.
@@ -668,18 +608,20 @@ Our team evaluated three supervised learning models; **Decision Tree**, **Random
 
 > While XGBoost and logistic regression were considered during the scoping phase, they were not used in this iteration due to team prioritization of interpretability and resource constraints. These remain viable options for future benchmarking.
 
-## 🎯 Conclusion and Future Directions
+---
+
+## Conclusion and Future Directions
 
 This project showcased the power of supervised machine learning to improve marketing outcomes through data-driven lead targeting. From feature engineering to deployment planning, our workflow balanced predictive rigor with practical usability.
 
-### ✅ Achievements
+### Achievements
 
 - Built and validated three models, culminating in a neural network with 81% accuracy.
 - Applied SHAP for transparency and trust in business-facing predictions.
 - Delivered an interactive Streamlit dashboard for non-technical user adoption.
 - Created a modular pipeline for retraining and future expansion.
 
-### 🔭 Next Steps
+### Next Steps
 
 - **Benchmark Additional Models**: Reintroduce logistic regression and explore XGBoost for comparative studies.
 - **Enhance Feature Set**: Include macroeconomic indicators, client lifecycle variables, or contact history depth.
@@ -688,3 +630,5 @@ This project showcased the power of supervised machine learning to improve marke
 - **Monitor Performance Drift**: Establish feedback pipelines and retraining schedules to handle changing data patterns.
 
 > The groundwork is set for scaled experimentation, responsible deployment, and continuous learning — turning predictive insights into sustainable business impact.
+
+---
