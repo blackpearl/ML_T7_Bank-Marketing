@@ -61,9 +61,9 @@ In an evolving digital landscape, the ability to prioritize high-value leads, an
 
 ## Project Structure
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ---
 
@@ -188,6 +188,41 @@ This project relies on a suite of Python libraries and frameworks that support e
 
 ---
 
+## Installation and Running the App
+
+### Prerequisites
+- Python 3.9 or higher (required by core dependencies)
+- Git (for cloning the repository)
+
+### Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/blackpearl/ML_T7_Bank-Marketing.git
+   cd ML_T7_Bank-Marketing
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Streamlit app:
+   ```bash
+   streamlit run app/main.py
+   ```
+
+The app will automatically open in your default web browser. If not, you can access it at:
+- Local URL: http://localhost:8501
+- Network URL: http://192.168.x.x:8501 (for accessing from other devices on your network)
+
+### Troubleshooting
+- If the browser doesn't open automatically, manually visit http://localhost:8501
+- If you see a firewall warning, allow access for Streamlit
+- If port 8501 is in use, Streamlit will automatically try the next available port (check the terminal output for the correct URL)
+
+---
+
 ## Dataset Overview - Understanding the Raw Data
 **URL**: [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing) https://archive.ics.uci.edu/dataset/222/bank+marketing
 
@@ -233,7 +268,7 @@ The target indicates whether a client subscribed to a term deposit.
 - Both datasets show **significant class imbalance**.
 - Approximately **88.3%** of clients did **not** subscribe (`y = no`), while only **11.7%** said yes.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 > **Modeling Implication**: Class imbalance must be addressed (e.g., via resampling or class-weighting).
 
@@ -480,13 +515,47 @@ Our deployment follows a straightforward architecture:
 
 #### Application Interface
 
-![alt text](image.png)
+![alt text](images/image.png)
 Streamlit App - Main Interface
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 Streamlit App - Prediction Results
 
 The application captures all the key customer features we identified during our analysis and provides immediate feedback on subscription probability. Users can adjust inputs and see how different customer characteristics affect the likelihood of term deposit subscription.
+
+### 🚀 Batch Prediction: Supercharge Your Campaign Efficiency
+
+![alt text](images/image-5.png)
+Streamlit App - Batch Prediction - Uploading new unseen customer list
+
+
+Transform your marketing campaigns with our powerful batch prediction feature. Upload your customer dataset, and let our AI instantly identify your highest-potential leads.
+
+#### ✨ Key Features
+- **Instant Batch Processing**: Upload hundreds of customer profiles in one go
+- **Smart Lead Prioritization**: Automatically identifies high-probability subscribers (60%+ likelihood)
+
+![alt text](images/image-6.png)
+Streamlit App - Batch Prediction - Get the High-probability subscribers
+
+- **Rich Data Insights**: Get immediate statistical summaries of your customer base
+- **Campaign-Ready Results**: Export a focused list of your most promising leads
+
+
+
+#### 💡 Real-World Impact
+In our demonstration with 100 previously unseen customers, our model identified 14 high-potential leads—clients with over 60% probability of subscribing to a term deposit. This means:
+- 86% reduction in unnecessary outreach
+- Focused attention on the most promising prospects
+- Significantly higher ROI on marketing efforts
+
+#### 📊 How It Works
+1. Upload your customer data CSV (matching our standard format)
+2. Get instant visualization of your customer demographics
+3. Receive an actionable table of high-probability leads
+4. Export results and start your targeted campaign
+
+> 🎯 **Pro Tip**: Marketing teams can now pre-screen entire customer segments before launching campaigns, ensuring resources are invested where they'll generate the highest returns.
 
 ### Business Application and ROI Optimization
 
