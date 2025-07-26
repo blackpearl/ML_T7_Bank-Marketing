@@ -79,50 +79,61 @@ MONTH_MAPPING = {
 }
 
 def get_user_input_features():
-    with st.sidebar.form(key="customer_features_form"):
+    """Get user input features from the sidebar."""
+    with st.sidebar:
         st.header("Input Customer Features")
-
-        age = st.slider("Age", 18, 98, 30)
-        job = st.selectbox("Job", JOBS)
-        marital = st.selectbox("Marital Status", MARITAL)
-        education = st.selectbox("Education", EDUCATIONS)
-        default = st.radio("Has credit in default?", DEFAULTS)
-        balance = st.slider("Balance", -5000, 100000, 0, step=100)
-        housing = st.radio("Has housing loan?", HOUSING)
-        loan = st.radio("Has personal loan?", LOAN)
-        contact = st.selectbox("Contact communication type", CONTACTS)
-        month = st.selectbox("Last contact month", MONTHS)
-        day = st.slider("Last contact day of month", 1, 31, 15)
-        duration = st.slider("Last contact duration (seconds)", 0, 5000, 300)
-        campaign = st.slider("Number of contacts performed", 1, 50, 1)
-        pdays = st.slider("Days since last contact", -1, 999, -1, 
-                         help="-1 means client was not previously contacted")
-        previous = st.slider("Previous contacts", 0, 50, 0)
-        poutcome = st.selectbox("Outcome of previous campaign", POUTCOME)
-
-        submitted = st.form_submit_button("Predict")
-
-    if submitted:
-        features = OrderedDict({
-            "age": age,
-            "job": job,
-            "marital": marital,
-            "education": education,
-            "default": default,
-            "balance": balance,
-            "housing": housing,
-            "loan": loan,
-            "contact": contact,
-            "day": day,
-            "month": month,
-            "duration": duration,
-            "campaign": campaign,
-            "pdays": pdays,
-            "previous": previous,
-            "poutcome": poutcome,
-        })
-        return features
-    return None
+        
+        # Numeric inputs
+        age = st.slider("Age", min_value=18, max_value=98, value=30)
+        
+        # Categorical inputs
+        job = st.selectbox("Job", options=JOBS, index=0)
+        marital = st.selectbox("Marital Status", options=MARITAL, index=0)
+        education = st.selectbox("Education", options=EDUCATIONS, index=0)
+        
+        # Binary inputs with radio buttons
+        default = st.radio("Has credit in default?", options=DEFAULTS, horizontal=True)
+        
+        # Numeric input with slider
+        balance = st.slider("Balance", min_value=-5000, max_value=100000, value=0)
+        
+        # More binary inputs
+        housing = st.radio("Has housing loan?", options=HOUSING, horizontal=True)
+        loan = st.radio("Has personal loan?", options=LOAN, horizontal=True)
+        
+        # Contact information
+        contact = st.selectbox("Contact communication type", options=CONTACTS, index=0)
+        month = st.selectbox("Last contact month", options=MONTHS, index=0)
+        day = st.slider("Last contact day of month", min_value=1, max_value=31, value=15)
+        
+        # Campaign information
+        duration = st.slider("Last contact duration (seconds)", min_value=0, max_value=5000, value=0)
+        campaign = st.slider("Number of contacts performed", min_value=1, max_value=50, value=1)
+        pdays = st.slider("Days since last contact", min_value=-1, max_value=999, value=-1)
+        previous = st.slider("Previous contacts", min_value=0, max_value=50, value=0)
+        poutcome = st.selectbox("Outcome of previous campaign", options=POUTCOME, index=0)
+    
+    # Create features dictionary with all required fields
+    features = {
+        'age': age,
+        'job': job,
+        'marital': marital,
+        'education': education,
+        'default': default,
+        'balance': balance,
+        'housing': housing,
+        'loan': loan,
+        'contact': contact,
+        'month': month,  # Original month text
+        'day': day,
+        'duration': duration,
+        'campaign': campaign,
+        'pdays': pdays,
+        'previous': previous,
+        'poutcome': poutcome
+    }
+    
+    return features
 
 def preprocess_features(features_df):
     """Preprocess features to match model requirements."""
@@ -213,43 +224,107 @@ def predict_subscription_proba(features_df):
         st.error(f"Error loading model or making prediction: {str(e)}")
         raise
 
-# Main area
-col1, col2 = st.columns([2, 1])
-with col1:
+def main():
     st.title("Bank Term Deposit Subscription Predictor")
-    st.write("""
-    Enter customer information on the left and click **Predict** to assess the likelihood 
-    this customer will subscribe to a term deposit (based on historical marketing data).
-    """)
-
-# Get user input
-user_input = get_user_input_features()
-
-if user_input:
-    st.header("User Input Features")
-    st.json(user_input)
+    st.write("Enter customer information on the left and click Predict to assess the likelihood this customer will subscribe to a term deposit (based on historical marketing data).")
     
-    try:
-        # Create DataFrame from input
-        df_input = pd.DataFrame([user_input])
-        
-        # Get prediction probability
-        proba = predict_subscription_proba(df_input)
-        
-        # Display results
-        st.header("Prediction")
-        st.metric("Subscription Probability", f"{proba:.2%}")
-        
-        if proba > 0.6:
-            st.success("High likelihood! Consider contacting this customer.")
-        else:
-            st.info("Low to moderate likelihood.")
-            
-        # Model info
-        with st.expander("Model Information"):
-            st.write("Using Neural Network model for predictions")
+    # Get user input features
+    features = get_user_input_features()
     
-    except Exception as e:
-        st.error(f"Error making prediction: {str(e)}")
-else:
-    st.info("👈 Fill out the form in the sidebar and click Predict!")
+    # Create columns for layout
+    col1, col2 = st.columns([2, 3])
+    
+    with col1:
+        st.subheader("Single Customer Prediction")
+        st.write(features)
+        
+        if st.button("Predict"):
+            try:
+                # Create DataFrame and ensure month is handled correctly
+                df_input = pd.DataFrame([features])
+                prob = predict_subscription_proba(df_input)
+                
+                st.success(f"Probability of subscription: {prob:.1%}")
+                
+                if prob > 0.6:
+                    st.info("High probability customer! Recommended for contact.")
+                else:
+                    st.info("Low probability customer. Consider other prospects first.")
+                    
+            except Exception as e:
+                st.error(f"Error making prediction: {str(e)}")
+                logger.error(f"Error making prediction: {str(e)}", exc_info=True)
+    
+    # Batch prediction section - moved outside the col1 context
+    st.divider()
+    st.subheader("Batch Prediction")
+    
+    # Create two columns for batch section
+    batch_col1, batch_col2 = st.columns([2, 3])
+    
+    with batch_col1:
+        uploaded_file = st.file_uploader("Upload customer dataset (CSV)", type=['csv'])
+        
+        if uploaded_file is not None:
+            try:
+                # Read CSV file
+                df = pd.read_csv(uploaded_file, sep=';')
+                
+                # Make predictions for all customers
+                probabilities = []
+                for _, row in df.iterrows():
+                    prob = predict_subscription_proba(pd.DataFrame([row]))
+                    probabilities.append(prob)
+                
+                # Add predictions to DataFrame
+                df['subscription_probability'] = probabilities
+                
+                # Filter high-probability customers
+                high_prob_customers = df[df['subscription_probability'] > 0.6].copy()
+                high_prob_customers['subscription_probability'] = high_prob_customers['subscription_probability'].apply(lambda x: f"{x:.1%}")
+                
+                # Display results in the right column
+                with batch_col2:
+                    st.subheader("Dataset Summary")
+                    st.write(f"Total customers in dataset: {len(df)}")
+                    st.write(f"High-probability customers (>60%): {len(high_prob_customers)}")
+                    
+                    # Display key feature distributions
+                    st.subheader("Key Feature Distributions")
+                    dist_col1, dist_col2 = st.columns(2)
+                    
+                    with dist_col1:
+                        st.write("Job Distribution")
+                        st.write(df['job'].value_counts())
+                        
+                        st.write("Month Distribution")
+                        st.write(df['month'].value_counts())
+                    
+                    with dist_col2:
+                        st.write("Housing Loan Status")
+                        st.write(df['housing'].value_counts())
+                        
+                        st.write("Previous Campaign Outcome")
+                        st.write(df['poutcome'].value_counts())
+                    
+                    # Display high-probability customers
+                    st.subheader("High-Probability Customers")
+                    if len(high_prob_customers) > 0:
+                        st.dataframe(
+                            high_prob_customers[['age', 'job', 'education', 'balance', 'housing', 'month', 'subscription_probability']],
+                            use_container_width=True
+                        )
+                    else:
+                        st.info("No customers with subscription probability >60% found in the dataset.")
+                    
+            except Exception as e:
+                st.error(f"Error processing CSV file: {str(e)}")
+                logger.error(f"Error processing CSV file: {str(e)}", exc_info=True)
+    
+    # Show placeholder in batch results area when no file is uploaded
+    if uploaded_file is None:
+        with batch_col2:
+            st.info("Upload a CSV file to see batch predictions and dataset summary.")
+
+if __name__ == "__main__":
+    main()
